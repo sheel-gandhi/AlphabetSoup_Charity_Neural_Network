@@ -30,7 +30,19 @@ Alphabet Soup Charity, a charity organization is about to analyse 34,000 funding
 
 ### **Compiling, Training, and Evaluating the Model**
 
-1. **How many neurons, layers, and activation functions did you select for your neural network model, and why?**
+1. **How many neurons, layers, and activation functions did you select for your neural network model, and why?**  
+  For initial analysis, we have taken 2 layers. The first layer will have 80 neurons with an activation function "relu". For second layer will have 30 neurons with "relu" activation function. The number of layers and neurons has been selected to optimize the model.
 
 2. **Were you able to achieve the target model performance?**
+  With the above selection of layers, neurons and activation functions, we were able to acheive the Accuracy: 0.724. The target performance of 0.75 is not achieved from this model   
+  
 3. **What steps did you take to try and increase model performance?**
+  To acheive better results, we tried multiple options with different number of neurons and activation functions to see if we can improve the results from the model. 
+  
+  Optimize trial 1 - We tried to drop some of the redundant variables like Status and Special_Consideration as looking at the variable counts, it showed data was skewed towards one value. We also merged Application column by replacing values lower thab 1000 under "Other". Three layers were added for this trial. First layer having 100 neurons witb "relu" activation function, Second layer having 40 neurons with sigmoid activation function and third layer having 15 neurons with sigmoid activation function. However with this model, we acheived accuracy of 0.710
+  
+  Optimize trial 2 -  We tried to drop some of the redundant variables like Income_Amt as looking at the column, few funding values are just "0" it showed data was skewed towards one value. Three layers were added for this trial. First layer having 100 neurons witb "relu" activation function, Second layer having 40 neurons with relu activation function and third layer having 20 neurons with relu activation function. Total number of Epoch was changed to 40. However with this model, we acheived accuracy of 0.721
+  
+  Optimize trial 3 -  We tried to drop some of the redundant variables like Income_Amt and ASK_AMT as looking at the column, few funding values in Income_Amt column are just "0" it showed skewed data and ASK_AMT column has huge number of unique values. Three layers were added for this trial. First layer having 100 neurons witb "relu" activation function, Second layer having 80 neurons with sigmoid activation function and third layer having 20 neurons with sigmoid activation function. Total number of Epoch was changed to 50. However with this model, we acheived accuracy of 0.720
+  
+Wine of the trials, we were able to acheive the target performance of   
